@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="#" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>Labyrinth solver</title>
-</head>
-<body>
-    <h1>Labyrinth solver</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="#" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Labyrinth solver</title>
+    </head>
+    <body>
+        <h1>Labyrinth solver</h1>
 
-    <script type="module" src="controller.js"></script>
-</body>
+        <!-- Kontrol panel -->
+        <section>
+            <fieldset>
+                <legend>Control panel</legend>
+                    <label for="strategy">Select strategy:</label>
+                    <select name="strategy" id="strategy-select">
+                        <option value="NESW">NESW</option>
+                        <option value="NEWS">NEWS</option>
+                        <option value="NSEW">NSEW</option>
+                        <option value="NSWE">NSWE</option>
+                        <option value="NWSE">NWSE</option>
+                        <option value="NWES">NWES</option>
+                        <option value="ENSW">ENSW</option>
+                        <option value="ENWS">ENWS</option>
+                        <option value="ESNW">ESNW</option>
+                        <option value="ESWN">ESWN</option>
+                        <option value="EWNS">EWNS</option>
+                        <option value="EWSN">EWSN</option>
+                        <option value="SNEW">SNEW</option>
+                        <option value="SNWE">SNWE</option>
+                        <option value="SENW">SENW</option>
+                        <option value="SEWN">SEWN</option>
+                        <option value="SWNE">SWNE</option>
+                        <option value="SWEN">SWEN</option>
+                        <option value="WNES">WNES</option>
+                        <option value="WNSE">WNSE</option>
+                        <option value="WENS">WENS</option>
+                        <option value="WESN">WESN</option>
+                        <option value="WSNE">WSNE</option>
+                        <option value="WSEN">WSEN</option>
+                    </select>
+                    <button id="dfs-solve-btn">DFS solve</button>
+            </fieldset>
+        </section>
+
+        <!-- Labyrint grid -->
+        <section id="grid-container">
+            <!-- cells are inserted here -->
+        </section>
+
+        <script type="module" src="controller.js"></script>
+    </body>
 </html>
