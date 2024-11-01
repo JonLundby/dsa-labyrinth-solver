@@ -22,6 +22,7 @@ h1 {
     grid-template-rows: repeat(var(--grid-rows), max-content);
     grid-template-columns: repeat(var(--grid-cols), max-content);
     margin: 12px;
+    border: 2px solid black;
 }
 
 .cell {
@@ -30,6 +31,7 @@ h1 {
     height: 50px;
     aspect-ratio: 1 / 1;
     box-sizing: border-box;
+    border: 1px dotted grey;
 }
 
 .north {
@@ -39,17 +41,27 @@ h1 {
 .east {
     border-right: 2px solid black;
 }
+
 .south {
     border-bottom: 2px solid black;
 }
+
 .west {
     border-left: 2px solid black;
 }
 
 .start {
-    background-color: royalblue;
+    background-color: lightskyblue;
 }
 
 .goal {
     background-color: green;
+}
+
+.visited {
+    background-color: dimgray;
+}
+
+.route {
+    background-color: royalblue;
 }
