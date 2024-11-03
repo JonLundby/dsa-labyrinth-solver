@@ -10,6 +10,21 @@ export default class Stack {
         this.tail = null;
     }
 
+    [Symbol.iterator]() {
+        let current = this.tail;
+        return {
+            next() {
+                if (current) {
+                    const value = current.data;
+                    current = current.prev;
+                    return { value, done: false };
+                } else {
+                    return { done: true };
+                }
+            },
+        };
+    }
+
     push(data) {
         const newNode = new Node(data);
 

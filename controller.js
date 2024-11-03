@@ -9,7 +9,8 @@ const endpoint = `./labyrinth_03.json`;
 let model;
 let startCell;
 let goalCell;
-let route = []; //new Stack();
+// let route = []; //new Stack();
+let route = new Stack();
 let strategy;
 let goalFound = false;
 
