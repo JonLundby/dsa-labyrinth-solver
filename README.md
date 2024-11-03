@@ -1,5 +1,7 @@
 # Labyrinth solver
 
+[Try the labyrinth solver](https://jonlundby.github.io/dsa-labyrinth-solver/)
+
 - For this labyrinth solver I used a Depth-First-Search algorithm with backtracking.
 
 - The algorithm is recursive with a stack so that every cell visited will be stored in the stack called route
