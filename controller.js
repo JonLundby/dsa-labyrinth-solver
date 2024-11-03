@@ -5,6 +5,7 @@ import Stack from "./stack.js";
 
 window.addEventListener("load", init);
 
+const endpoint = `./labyrinth_03.json`;
 let model;
 let startCell;
 let goalCell;
@@ -34,7 +35,7 @@ async function init() {
 
 // fetch model/json data
 async function getLabyrinthModel() {
-    const response = await fetch(`./labyrinth_03.json`);
+    const response = await fetch(endpoint);
     const data = await response.json();
 
     return data;
