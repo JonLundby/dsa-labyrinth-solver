@@ -15,24 +15,26 @@ let goalFound = false;
 async function init() {
     // model sættes til at være javascript objekt parsed fra json
     model = await getLabyrinthModel();
-
+    
+    
     // bygger den visuelle labyrint/grid
     view.createGrid(model);
     view.showVisualLabyrinth(model);
-
+    
     // sætter start og goal celler svarende til model/maze/labyrint
     startCell = model.maze[model.start.row][model.start.col];
     goalCell = model.goal;
-
+    
     // eventlisteners
     document.querySelector("#solve-btn").addEventListener("click", () => {
         visitCell(startCell); // start-cellen bliver sendt med som den første celle der besøges
     });
+    
 }
 
 // fetch model/json data
 async function getLabyrinthModel() {
-    const response = await fetch(`./labyrinth_02.json`);
+    const response = await fetch(`./labyrinth_03.json`);
     const data = await response.json();
 
     return data;
@@ -80,9 +82,9 @@ function getValidNeighbours(cell) {
     // Strategi for at tjekke vægge mod N, E, S, W
     const directions = [
         { name: "north", rowChange: -1, colChange: 0 },
-        { name: "west", rowChange: 0, colChange: -1 },
-        { name: "south", rowChange: 1, colChange: 0 },
         { name: "east", rowChange: 0, colChange: 1 },
+        { name: "south", rowChange: 1, colChange: 0 },
+        { name: "west", rowChange: 0, colChange: -1 },
     ];
 
     // for hver mulig retning af cellen...
